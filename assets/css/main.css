@@ -72,7 +72,7 @@ body {
   height: 100%;
   background-color: #242629;
   transition: 0.4s;
-  z-index: 1;
+  z-index: 9;
   overflow-y: auto;
 }
 
