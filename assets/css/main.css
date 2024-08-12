@@ -1067,13 +1067,14 @@ input, select, textarea {
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
 		background: rgba(31,34,36,0.8);
-		bottom: 40em;
+		bottom: 4em;
 		left: 0;
 		max-height: calc(80vh - 4em);
 		overflow-y: auto;
 		position: fixed;
 		width: 100%;
 		z-index: 10001;
+		text-decoration: none;
 	}
 
 		.panel.active {
