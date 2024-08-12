@@ -6,7 +6,13 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+.btn-gradient-border {
+  color: rgba(var(--text-color));
+  border: 2px double transparent;
+      background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
 @-moz-keyframes spinner {
 	0% {
 		-moz-transform: rotate(0deg);
