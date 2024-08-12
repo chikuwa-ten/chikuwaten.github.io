@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<!--
+	Multiverse by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>DA 宝箱の場所</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><strong>宝箱の場所</strong><a href="index.html">レポロ村</a><a href="index2.html">マクルダ村</a></h1>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						
+						<article class="thumb">
+							<a href="images/fulls/-45_35_157.gif" class="image"><img src="images/thumbs/-45_35_157.png" alt="" /></a>
+							<h2>レポロ村 -45 35 157</h2>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/-20_31_-97.gif" class="image"><img src="images/thumbs/-20_31_-97.png" alt="" /></a>
+							<h2>レポロ村 -20 31 -97</h2>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/-19_30_-42.gif" class="image"><img src="images/thumbs/-19_30_-42.png" alt="" /></a>
+							<h2>レポロ村 -19 30 -42</h2>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/-7_31_9.gif" class="image"><img src="images/thumbs/-7_31_9.png" alt="" /></a>
+							<h2>レポロ村 -7 31 9</h2>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/55_23_30.gif" class="image"><img src="images/thumbs/55_23_30.png" alt="" /></a>
+							<h2>レポロ村 55 23 30</h2>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/65_35_-6.gif" class="image"><img src="images/thumbs/65_35_-6.png" alt="" /></a>
+							<h2>レポロ村 65 35 -6</h2>
+						</article>
+						
+						
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
