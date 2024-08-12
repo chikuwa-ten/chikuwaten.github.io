@@ -1095,11 +1095,13 @@ input, select, textarea {
 				display: -webkit-flex;
 				display: -ms-flex;
 				display: flex;
+				text-decoration: none;
 			}
 
 				.panel > .inner.split > div {
 					margin-left: 4em;
 					width: 50%;
+					text-decoration: none;
 				}
 
 				.panel > .inner.split > :first-child {
