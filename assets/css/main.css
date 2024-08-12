@@ -27,8 +27,8 @@ body {
 .menu-button {
   display: block;
   position: fixed;
-  top: 30px;
-  right: 0px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
   z-index: 100050;
 }
