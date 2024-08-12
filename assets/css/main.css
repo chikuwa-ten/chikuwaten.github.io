@@ -67,7 +67,7 @@ body {
 .menu {
   position: fixed;
   top: 0;
-  left: -100%; /* 変更: メニューを左からスライドインさせるために left に設定 */
+  up: -100%; /* 変更: メニューを左からスライドインさせるために left に設定 */
   width: 100%;
   height: 100%;
   background-color: #242629;
