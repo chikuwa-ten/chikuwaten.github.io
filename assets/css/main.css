@@ -16,7 +16,7 @@ body {
 /* メニューコンテナ全体のスタイル */
 .menu-container {
   position: fixed;
-  top: 0;
+  top: 50;
   left: 0;
   width: 100%;
   height: 100%;
