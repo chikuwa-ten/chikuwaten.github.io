@@ -7,6 +7,31 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+.btn_design {
+    font-size: 28px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 15px;
+    background-color: #ffffff;
+    color: #000000;
+    border: #000000 solid 2px;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* マウスオーバー時 */
+.btn_design:hover {
+    color: #ffffff;
+    background-color: #000000;
+    cursor: pointer;
+}
+
 /* 全体のスタイル */
 body {
   margin: 0;
@@ -91,7 +116,7 @@ body {
 .menu ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 17px;
   display: block;
   padding: 10px 0;
   transition: 0.2s;
