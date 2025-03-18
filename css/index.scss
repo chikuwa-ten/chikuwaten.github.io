@@ -1,0 +1,608 @@
+:root {
+  --title_font: sans-serif;
+  --accent_color: rgb(253, 161, 253);
+  --hover_color: rgb(141, 93, 141);
+  --box_shadow: rgba(255, 255, 255, 0.3) 0px 0px 10px 5px;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: var(--title_font);
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+span {
+  color: var(--accent_color);
+  font-weight: bold;
+}
+
+button {
+  display: block;
+  margin-top: 5em;
+  height: 75px;
+  width: 350px;
+  background-color: var(--accent_color);
+  border-radius: 0.5em;
+  border: none;
+  font-weight: bold;
+  color: black;
+  font-size: 25px;
+  transition: all 0.2s ease;
+  box-shadow: var(--box_shadow);
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--hover_color);
+  transform: translateY(-10px);
+}
+
+.navbar.blurred {
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.navbar {
+  position: fixed;
+  height: 100px;
+  width: calc(100% - 4em);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  background-color: black;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+
+  a {
+    text-decoration: none;
+    height: 80%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .links {
+    a {
+      margin-inline: 1.5em;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+    }
+
+    a:hover {
+      color: var(--accent_color);
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+  }
+
+  button {
+    display: unset;
+    margin-top: 0;
+    height: 50px;
+    width: 115px;
+    color: black;
+    font-size: 17px;
+    box-shadow: unset;
+  }
+
+  button:hover {
+    color: white;
+    transform: unset;
+  }
+
+  #burger {
+    display: none;
+    cursor: pointer;
+    height: 30px;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  display: block;
+  padding: 2em;
+  transition: right 0.5s ease;
+  z-index: 99999;
+
+  h2 {
+    color: var(--accent_color);
+
+    font-size: 20px;
+    margin-bottom: 2em;
+  }
+
+  .mobile-links {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin-bottom: 2em;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+    }
+
+    a:hover {
+      color: var(--accent_color);
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    a:hover::after {
+      width: 50px;
+    }
+  }
+
+  button {
+    margin-top: 2em;
+    margin-inline: auto;
+    height: 50px;
+    width: 115px;
+    color: black;
+    font-size: 17px;
+    box-shadow: unset;
+  }
+
+  button:hover {
+    color: white;
+    transform: unset;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+
+.overlay:hover {
+  cursor: pointer;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+
+  .welcome {
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("../img/landingPage/background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .text {
+      padding-inline: 5%;
+      color: white;
+
+      h2 {
+        font-size: clamp(1rem, 3vw, 2rem);
+      }
+
+      h1 {
+        margin-bottom: 0.5em;
+        font-size: clamp(2.5rem, 10vw, 5.5rem);
+      }
+
+      h3 {
+        font-size: clamp(1.25rem, 3vw, 2rem);
+        width: 80%;
+        max-width: 1000px;
+      }
+    }
+  }
+
+  .img {
+    height: 50%;
+    width: 40%;
+  }
+}
+
+.main {
+  margin-top: 5em;
+
+  .stayUpdated {
+    margin: 0 auto 8em;
+    padding-inline: 1em;
+    padding-top: 10em;
+    width: 90%;
+    max-width: 750px;
+    color: white;
+    text-align: center;
+
+    h2 {
+      font-size: 50px;
+      margin-bottom: 1em;
+    }
+
+    p {
+      font-size: 30px;
+    }
+
+    button {
+      margin-inline: auto;
+    }
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    .stat {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0.5em;
+      width: 80%;
+      max-width: 500px;
+      height: 200px;
+      color: white;
+      text-align: center;
+      border-radius: 0.5em;
+      box-shadow: var(--box_shadow);
+
+      transition: all 0.2s ease-in-out;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 1em;
+      }
+
+      p {
+        font-size: 75px;
+        font-weight: bolder;
+      }
+
+      p:nth-child(3) {
+        margin-top: 1em;
+        font-size: 20px;
+      }
+    }
+
+    .stat:hover {
+      cursor: pointer;
+      background-color: var(--accent_color);
+      color: black;
+      transform: translateY(-10px);
+    }
+  }
+
+  .quotes {
+    margin: 5em auto;
+    padding-top: 10em;
+    width: 90%;
+    max-width: 900px;
+    padding-inline: 1em;
+    display: flex;
+    flex-direction: column;
+
+    .quote {
+      margin-bottom: 5em;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      height: auto;
+
+      img {
+        height: clamp(150px, 20vw, 200px);
+        border-radius: 100%;
+      }
+
+      .text {
+        width: 550px;
+        text-align: center;
+
+        p {
+          font-size: clamp(20px, 5vw, 40px);
+          color: white;
+          margin-bottom: 0.5em;
+          font-weight: bold;
+        }
+
+        span {
+          font-size: clamp(15px, 3vw, 25px);
+        }
+      }
+    }
+  }
+
+  .aboutus {
+    margin: 10em auto;
+    padding: 10em 0;
+    color: white;
+    width: 90%;
+    max-width: 1750px;
+    background-image: url("../img/landingPage/aboutus.jpeg");
+    background-size: 50%;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    .text {
+      width: 60%;
+      max-width: 1000px;
+
+      h2 {
+        font-size: clamp(30px, 10vw, 65px);
+        margin-bottom: 1em;
+      }
+
+      p {
+        font-size: clamp(24px, 3vw, 30px);
+      }
+
+      button {
+        margin-top: 3em;
+      }
+    }
+  }
+
+  .toolsUsed {
+    width: 90%;
+    max-width: 1600px;
+    margin-inline: auto;
+    h2 {
+      text-align: center;
+      color: white;
+      font-size: 50px;
+      margin-bottom: 2em;
+    }
+
+    .logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+
+      img {
+        height: clamp(110px, 20vw, 150px);
+        filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          transform: translateY(-20px);
+        }
+
+        &:first-child,
+        &:last-child {
+          height: 120px;
+        }
+      }
+    }
+  }
+
+  .donate {
+    margin: 20em 0 5em;
+    padding: 15em 5em 15em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 25%, rgb(0, 0, 0) 70%), url("../img/landingPage/donate.jpeg");
+    background-repeat: no-repeat;
+    background-position: 100px center;
+    background-size: 35%;
+
+    .text {
+      width: 90%;
+      max-width: 1000px;
+      text-align: right;
+
+      h2 {
+        font-size: clamp(50px, 6vw, 80px);
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        margin-left: 10px;
+        font-size: clamp(20px, 2vw, 30px);
+      }
+
+      button {
+        display: unset;
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 2px solid rgb(21, 14, 21);
+  padding: 5em 0;
+
+  .content {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      color: white;
+      font-size: 40px;
+      margin-bottom: 1em;
+    }
+
+    a {
+      margin-bottom: 10px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+    }
+
+    a:hover {
+      color: var(--accent_color);
+    }
+
+    p {
+      margin-top: 5em;
+      color: white;
+      font-size: clamp(15px, 2vw, 18px);
+
+      a {
+        font-size: clamp(15px, 2vw, 18px);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .links {
+    display: none;
+  }
+
+  .navbar #burger {
+    display: block;
+  }
+
+  .navbar-mobile.open {
+    display: block;
+    right: 0;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 550px) {
+  .welcome .text button {
+    margin: 3em auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutus .text {
+    text-align: center;
+
+    button {
+      margin-inline: auto;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .main .aboutus {
+    background-position: center;
+    background-size: 70%;
+
+    .text {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .main .aboutus {
+    background-image: unset;
+
+    .text {
+      width: 100%;
+      max-width: unset;
+      text-align: center;
+
+      button {
+        margin-inline: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 1650px) {
+  .main .donate {
+    background-position: left;
+  }
+}
+
+@media (max-width: 1500px) {
+  .main .donate {
+    background-image: unset;
+    padding-inline: 1em;
+
+    .text {
+      margin-inline: auto;
+      width: 100%;
+      max-width: unset;
+      text-align: center;
+
+      button {
+        margin-inline: auto;
+      }
+    }
+  }
+}

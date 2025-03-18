@@ -1,0 +1,163 @@
+<!--
+
+ToDo:
+- Make Stats work
+- Footer
+
+- Everyone who donates dont have to wait 30s to generate
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JsonUI-Maker - Welcome</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="#top"><img src="img/favicon.png" alt="" /></a>
+      <div class="links">
+        <a href="#stats">Stats</a>
+        <a href="#quotes">Quotes of People</a>
+        <a href="#about">About The Project</a>
+        <a href="#donate">Donation</a>
+        <button onclick="window.open('generator.html', '_blank');">Start Now</button>
+      </div>
+      <img id="burger" src="img/landingPage/icons/navbar.png" alt="" />
+    </div>
+    <div class="navbar-mobile" id="navbar-mobile">
+      <h2>mcuimaker.org</h2>
+      <div class="mobile-links">
+        <a href="#stats">Stats</a>
+        <a href="#quotes">Quotes of People</a>
+        <a href="#about">About The Project</a>
+        <a href="#donate">Donation</a>
+        <button onclick="window.open('generator.html', '_blank');">Start Now</button>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="header" id="top">
+      <div class="welcome">
+        <div class="text">
+          <h2>FINALLY IT'S HERE, THE</h2>
+          <h1>MCPE JSON UI Web Generator</h1>
+          <h3>
+            Create stunning UI's with ease. Nearly everything is possible - and upcoming improvements and new features are already on their way.<br /><br />Made
+            with Love for Server-/ScriptApi users.
+          </h3>
+          <button onclick="window.open('generator.html', '_blank');">Start Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="main" id="main">
+      <div class="stayUpdated" id="stats">
+        <h2>Stay Updated And Informated</h2>
+        <p>
+          Follow developments on the social networks. <span>On Discord</span> you can see <span>generated forms from others</span>, get inspired,
+          <span>ask for help</span> and chill.
+        </p>
+        <button onclick="window.open('https://discord.gg/b6G4hJKn7G', '_blank');">Join The Discord</button>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <h3>Forms Generated:</h3>
+          <p class="stat_value">5+</p>
+          <p>This has a total value of over €100!</p>
+        </div>
+        <div class="stat">
+          <h3>Website Clicks:</h3>
+          <p class="stat_value">100+</p>
+          <p>So many people did see my work - Help!</p>
+        </div>
+        <div class="stat">
+          <h3>Lines Of Code Generated:</h3>
+          <p class="stat_value">1.000+</p>
+          <p>That would be a programming time of 10 hours!</p>
+        </div>
+      </div>
+
+      <div class="quotes" id="quotes">
+        <div class="quote">
+          <img src="img/landingPage/quotes/glso.png" alt="" />
+          <div class="text">
+            <p>"i think this is just the tool we have been waiting for…"</p>
+            <span>~ glso_, Bedrock Add-Ons</span>
+          </div>
+        </div>
+        <div class="quote">
+          <div class="text">
+            <p>"THIS GONNA BE USEFUL FRFR"</p>
+            <span>~ t1m0thy_yt, Bedrock Add-Ons</span>
+          </div>
+          <img src="img/landingPage/quotes/timo.png" alt="" />
+        </div>
+        <div class="quote">
+          <img src="img/landingPage/quotes/swit.png" alt="" />
+          <div class="text">
+            <p>"Wew - It's typically what motivates me to create"</p>
+            <span>~ swit_azya, PocketMine-MP Community</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="aboutus" id="about">
+        <div class="text">
+          <h2>About The Project</h2>
+          <p>
+            <span>The world is increasingly being taken over by AI.</span> In the context of today's AI's, programming is sometimes possible without
+            any programming knowledge. To implement this even further, so-called “NoCode” platforms are often offered for “programming” in conjunction
+            with a graphical editor. This concept fascinates me and <span>JsonUI-Maker</span> is my contribution to this incredibly useful
+            environment. I originally developed the concept of this editor so that I would no longer have to do boring copy/paste for my own forms.
+            <span>However, during the development</span>, which only lasted a week, I realized that I wanted to make this tool
+            <span>available to every Minecraft enthusiast.</span>
+          </p>
+          <button onclick="window.open('https://github.com/blackbarbar', '_blank');">Follow Me On Github</button>
+        </div>
+      </div>
+      <div class="toolsUsed">
+        <h2>Tools Need Tools In Their Development</h2>
+        <div class="logos">
+          <img src="/img/landingPage/icons/vsc.png" alt="" onclick="window.open('https://code.visualstudio.com/', '_blank')" />
+          <img src="/img/landingPage/icons/phpstorm.png" alt="" onclick="window.open('https://www.jetbrains.com/de-de/phpstorm/', '_blank')" />
+          <img src="/img/landingPage/icons/mc.png" alt="" onclick="window.open('https://www.minecraft.net', '_blank')" />
+          <img src="/img/landingPage/icons/arc.png" alt="" onclick="window.open('https://arc.net/', '_blank')" />
+          <img src="/img/landingPage/icons/chatgpt.png" alt="" onclick="window.open('https://chatgpt.com/', '_blank')" />
+          <img src="/img/landingPage/icons/apple_music.png" alt="" onclick="window.open('https://music.apple.com', '_blank')" />
+          <img src="/img/landingPage/icons/microsoft_designer.png" alt="" onclick="window.open('https://designer.microsoft.com/', '_blank')" />
+          <img src="/img/landingPage/icons/github.png" alt="" onclick="window.open('https://github.com/', '_blank')" />
+        </div>
+      </div>
+      <div class="donate" id="donate">
+        <div class="text">
+          <h2>Keep This Project Alive</h2>
+          <h3>
+            I'm investing my free time to make this <span>project better, fix bugs and add even more functions</span>. Although I do it voluntarily
+            and have a lot of fun programming, especially on this project, I would of course be happy about a small voluntary donation.
+            <span>Donors will be marked with an extra role in the Discord.</span>
+          </h3>
+          <button onclick="window.open('https://www.paypal.me/robinbl22', '_blank');">Donate via PayPal</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/other/animateStats.js"></script>
+    <script src="js/other/navbar.js"></script>
+  </body>
+  <footer>
+    <div class="content">
+      <h2>Useful Links</h2>
+      <a href="https://discord.gg/b6G4hJKn7G" target="_blank">Join Our Discord</a>
+      <a href="https://github.com/blackbarbar" target="_blank">Follow Me On Github</a>
+      <a href="https://www.paypal.me/robinbl22" target="_blank">Donate Via PayPal</a>
+
+      <p>
+        All Background-Images were created by <a href="https://designer.microsoft.com/" target="_blank"><span>Micrsoft Design AI</span></a
+        >!
+      </p>
+    </div>
+  </footer>
+</html>

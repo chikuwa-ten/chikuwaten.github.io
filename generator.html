@@ -1,0 +1,62 @@
+<!--
+
+ToDo:
+- Fix Sizing
+- Generation Delay of 30s (advertise paypal)
+- Change .zip back to .mcpack
+- Test Test Test
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JsonUI-Maker - Generator</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <h1>JsonUI-Maker</h1>
+    <h2 id="placeholder">This website needs a minimum page-width of 1650px!</h2>
+
+    <div class="workspace">
+      <div class="available_items">
+        <h2>Items:</h2>
+        <p draggable="true">Form Body</p>
+        <p draggable="true">Form Title</p>
+        <p draggable="true">Form Content</p>
+        <p draggable="true">Close Button</p>
+        <p draggable="true">Scroll Panel</p>
+        <p draggable="true">Button Factory</p>
+        <p draggable="true">Button Grid</p>
+        <p draggable="true">Panel</p>
+        <p draggable="true">Stack Panel</p>
+        <p draggable="true">Label</p>
+        <p draggable="true">Image</p>
+        <p draggable="true">Player Renderer</p>
+        <p draggable="true">Input</p>
+        <p draggable="true">Dropdown</p>
+        <p draggable="true">Slider</p>
+        <p draggable="true">Step-Slider</p>
+        <p draggable="true">Checkbox</p>
+        <p draggable="true">Submit Button</p>
+      </div>
+      <div class="editor" id="editor"></div>
+      <div class="actions">
+        <p id="namespace_header">Namespace:</p>
+        <input id="namespace" placeholder="Namespace" value="testForm" onchange="saveNamespace(event)" />
+        <button onclick="resetEditor()" id="reset">Reset</button>
+        <button onclick="generateCode()" id="generateCode">Generate Code</button>
+      </div>
+    </div>
+    <script src="js/generateCode.js"></script>
+    <script src="js/resetEditor.js"></script>
+    <script src="js/dragItemLogic.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/resetActionDiv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  </body>
+</html>
